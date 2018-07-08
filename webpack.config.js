@@ -31,7 +31,7 @@ const config = {
   assetsPath: resolve('dist/assets'),
   // Change puplic path for gh-pages stage as --stage cli arg
   publicPath: PRODUCTION ? (stage ? 'assets/' : '/assets/') : '/',
-  PUBLIC: stage ? '/clients/ids-vote/' : '/', // stage public output dir
+  PUBLIC: stage ? '/ids-vote/' : '/', // stage public output dir
   watchContent: [
     resolve('src/images'),
     resolve('src/pages'),
