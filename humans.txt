@@ -1,0 +1,15 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    ollejah -- developer -- @ollejah
+
+# THANKS
+
+    Gauranga
+
+# TECHNOLOGY COLOPHON
+
+    Node.js, CSS3, HTML5, PWA
+    Apache Server Configs, ExpressServer Configs, JavaScript, Sass, Webpack
