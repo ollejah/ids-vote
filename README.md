@@ -1,7 +1,7 @@
 # ids-vote
 __Поддержи МШД!__
 
-Demo: [https://ollejah.github.io/ids-vote/]()
+[Demo](https://ollejah.github.io/ids-vote/)
 
 ### Setup
 
