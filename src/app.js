@@ -4,7 +4,7 @@ module.hot && module.hot.accept()
 import './styles/app.scss'
 
 /** Node environment */
-const BASE_URL = PRODUCTION ? 'http://ollejah.ru:3000' : '/api'
+const BASE_URL = PRODUCTION ? 'https://ollejah.ru:3000' : '/api'
 
 /**
  * DOM helpers
