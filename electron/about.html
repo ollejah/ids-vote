@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>About app</title>
+    <style>
+    html {
+      display: flex;
+      align-items: center;
+    }
+    body {
+      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+      margin: 0;
+      background: #503C53;
+      color: #FFF;
+    }
+    .svg-heart {
+      color: #F12753;
+    }
+    </style>
+</head>
+<body>
+    <h4>Поддержать МШД!</h4>
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" width="199" height="113" viewBox="0 0 199 113"><g fill="none" fill-rule="evenodd"><path class="svg-letter" fill="#FFF" fill-rule="nonzero" d="M11 109h20V1H11z"/><path class="svg-letter" fill="#FFF" d="M176.814 36.215v-1.201c0-13.226-4.734-18.484-12.718-18.484-5.77 0-10.799 3.155-10.799 9.164 0 6.464 2.514 9.467 6.804 12.323l20.705 13.974C192.05 59.656 199 66.267 199 82.496 199 101.579 187.465 113 166.165 113 143.535 113 132 99.627 132 77.387V73.18h19.372v4.207c0 15.177 7.101 19.086 14.793 19.086 7.69 0 11.982-5.413 11.982-12.175 0-7.06-3.553-11.267-11.095-16.227L149.005 56.05c-10.646-7.06-15.969-16.227-15.969-27.949 0-17.882 13.013-28.1 31.502-28.1 20.263 0 31.65 11.12 31.65 32.908v3.307h-19.374zM55 2h35.833C108.75 2 124 11.275 124 50.765v5.385c0 24.232-4.737 53.85-31.982 53.85H55V2zm20.284 91.993h12.735c13.18 0 15.252-17.05 15.252-38.143 0-26.474-3.554-37.843-14.66-37.843H75.284v75.986z"/><path class="svg-heart" fill="currentColor" fill-rule="nonzero" d="M42.246 38.189c3.43-7.174 11.268-12.188 20.383-12.188 12.28 0 21.123 9.269 22.235 20.315 0 0 .6 2.742-.72 7.678-1.8 6.724-6.027 12.697-11.728 17.255L42.246 95 12.584 71.248C6.884 66.69 2.655 60.716.857 53.993c-1.321-4.937-.721-7.678-.721-7.678C1.248 35.269 10.091 26 22.371 26c9.117 0 16.444 5.015 19.875 12.189z"/></g></svg>
+    </div>
+    <p class="version"></p>
+
+    <footer class="footer">
+      <small>We are using Node.js <script>document.write(process.versions.node)</script>,
+      Chromium <script>document.write(process.versions.chrome)</script>,
+      and Electron <script>document.write(process.versions.electron)</script>.</small>
+    </footer>
+
+    <script>
+      const pkg = require('./package.json');
+      document.querySelector('.version').innerHTML = 'Version ' + pkg.version;
+    </script>
+</body>
+</html>

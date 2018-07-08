@@ -1,0 +1,126 @@
+@import 'config';
+// @import 'base/extends';
+@import 'base/root';
+// @import 'base/flex-layout';
+
+/**
+ * Common Elements
+ */
+@import 'elements/links';
+@import 'elements/image';
+// @import 'elements/media';
+// @import 'elements/list';
+// @import 'hamburgers/used';
+
+/** Layout */
+html {
+  color: $dark;
+  background-image: svg(
+      '<svg width="48" height="64" viewBox="0 0 12 16" xmlns="http://www.w3.org/2000/svg"><path d="M4 .99C4 .445 4.444 0 5 0c.552 0 1 .45 1 .99v4.02C6 5.555 5.556 6 5 6c-.552 0-1-.45-1-.99V.99zm6 8c0-.546.444-.99 1-.99.552 0 1 .45 1 .99v4.02c0 .546-.444.99-1 .99-.552 0-1-.45-1-.99V8.99z" fill="#58b6c5" fill-opacity="0.3" fill-rule="evenodd"/></svg>'
+    ),
+    radial-gradient(circle, $secondary 50%, #58b6c5);
+  // background-image: svg(
+  //     '<svg width="120" height="120" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z" fill="#{$primary}" fill-opacity="0.1" fill-rule="evenodd"/></svg>'
+  //   ),
+  //   radial-gradient(circle, $secondary 50%, #58b6c5);
+}
+
+html.is-loading {
+  pointer-events: none;
+}
+
+body {
+  max-width: 34em;
+  display: flex;
+  align-items: center;
+  user-select: none;
+}
+
+/** Spinner */
+@import 'app/spinner';
+
+/** Containers */
+.wrapper {
+  width: 100%;
+  opacity: 1;
+  transform: opacity 1s ease;
+  .is-loading & {
+    opacity: 0.35;
+  }
+}
+
+.header,
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  @include sm {
+    flex-flow: nowrap row;
+  }
+  > * {
+    width: 100%;
+    margin: 1rem 1rem 0;
+  }
+  .logo {
+    max-width: 8em;
+    .svg-heart {
+      animation: heart-beat 1s linear infinite;
+    }
+    @keyframes heart-beat {
+      0% {
+        color: #76c6c6;
+      }
+      100% {
+        // color: #5A3B52;
+        color: $accent;
+      }
+    }
+  }
+  a[href='#vote'] {
+    background: $accent;
+    padding: 0.5em 1em;
+    text-align: center;
+    font-size: 1.75em;
+    color: #fff;
+    &:hover {
+      transform: scale(1.02);
+      background: #fff;
+      color: $accent;
+    }
+  }
+}
+
+.main {
+  position: relative;
+  z-index: 1;
+  margin: 0 1.5em;
+  h2 {
+    flex: 1;
+    font-weight: normal;
+    // font-size: 1.5em;
+    line-height: 1.35;
+    // letter-spacing: .5em;
+    color: #fff;
+  }
+  a[href='#update'] {
+    color: #fff;
+    &.is-rotate {
+      animation: rotate 1s linear infinite reverse;
+    }
+  }
+}
+
+.footer {
+  display: block;
+  text-align: center;
+  // color: cadetblue;
+}
+
+/** Results rlines */
+@import 'app/results';

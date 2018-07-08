@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>I ❤️ IDS! Отдать голос!</title>
+    <link href="css/app.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+  <body>
+
+    <div class="wrapper">
+      <header class="header"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="257" height="113" viewbox="0 0 257 113"><g fill="none" fill-rule="evenodd"><path fill="#FFF" fill-rule="nonzero" d="M0 109h20V1H0z"/><path class="svg-heart" fill="currentColor" fill-rule="nonzero" d="M67.755 36.719c3.31-7.486 10.87-12.717 19.664-12.717 11.846 0 20.377 9.671 21.45 21.197 0 0 .579 2.862-.696 8.013-1.735 7.015-5.813 13.248-11.313 18.004L67.755 96 39.14 71.215c-5.5-4.755-9.578-10.99-11.313-18.005-1.275-5.151-.696-8.012-.696-8.012C28.204 33.67 36.735 24 48.581 24c8.796 0 15.864 5.233 19.174 12.719z"/><path fill="#FFF" d="M234.814 36.215v-1.201c0-13.226-4.734-18.484-12.718-18.484-5.77 0-10.799 3.155-10.799 9.164 0 6.464 2.514 9.467 6.804 12.323l20.705 13.974C250.05 59.656 257 66.267 257 82.496 257 101.579 245.465 113 224.165 113 201.535 113 190 99.627 190 77.387V73.18h19.372v4.207c0 15.177 7.101 19.086 14.793 19.086 7.69 0 11.982-5.413 11.982-12.175 0-7.06-3.553-11.267-11.095-16.227L207.005 56.05c-10.646-7.06-15.969-16.227-15.969-27.949 0-17.882 13.013-28.1 31.502-28.1 20.263 0 31.65 11.12 31.65 32.908v3.307h-19.374zM116 2h35.833C169.75 2 185 11.275 185 50.765v5.385c0 24.232-4.737 53.85-31.982 53.85H116V2zm20.284 91.993h12.735c13.18 0 15.252-17.05 15.252-38.143 0-26.474-3.554-37.843-14.66-37.843h-13.327v75.986z"/></g></svg></div><a href="#vote">Поддержать МШД!</a></header>
+
+      <main class="main"><h2>На данный момент:</h2><a href="#update" class="js-update" title="Обновить результаты"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewbox="0 0 24 24"><path fill="currentColor" d="M12.291 4.727V2L8.655 5.636l3.636 3.636V6.545c3 0 5.455 2.455 5.455 5.455 0 .909-.273 1.818-.636 2.545l1.364 1.364c.636-1.182 1.091-2.455 1.091-3.909 0-4-3.273-7.273-7.273-7.273zm0 12.727c-3 0-5.455-2.455-5.455-5.455 0-.909.273-1.818.636-2.545L6.108 8.09c-.636 1.182-1.091 2.455-1.091 3.909 0 4 3.273 7.273 7.273 7.273v2.727l3.636-3.636-3.636-3.636v2.727z"/></svg></a></main>
+
+      <div class="js-results" hidden></div>
+
+      <!-- All of the Node.js APIs are available in this renderer process. -->
+      <footer class="footer">
+        <small>We are using Node.js <script>document.write(process.versions.node)</script>,
+        Chromium <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>.</small>
+      </footer>
+    </div>
+
+    <div class="offline-ready js-offline-ready" hidden><p>Нет соединения с интернетом</p></div>
+
+    <svg class="spinner js-loader" width="64" height="64" viewbox="0 0 64 64"><defs><lineargradient id="sGD" gradientunits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46"><stop offset="10%" style="stop-color:#f12753;stop-opacity:0"/><stop offset="100%" style="stop-color:#f12753"/></lineargradient></defs><g fill="none" style="stroke-width:4;stroke-linecap:round"><path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"/><path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32" style="stroke:#f12753"/></g></svg>
+
+    <script src="https://unpkg.com/focus-visible@4.1.4/dist/focus-visible.min.js" async></script>
+    <script>require('./renderer.js')</script>
+  </body>
+</html>

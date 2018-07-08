@@ -1,0 +1,73 @@
+<!-- htmlmin:ignore -->${ htmlWebpackPlugin.options.banner }<!-- htmlmin:ignore -->
+<!doctype html>
+<html lang="ru" class="is-loading">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="IDS Vote!">
+
+    <!-- Предварительный запрос DNS -->
+    <!-- <meta http-equiv="x-dns-prefetch-control" content="on"> -->
+    <!-- <link rel="dns-prefetch" href="//ajax.googleapis.com"> -->
+    <!-- <link rel="dns-prefetch" href="//polyfill.io"> -->
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="IDS Vote!">
+
+    <!-- webmanifest, Favicons -->
+    <link rel="manifest" href="${require(`../site.webmanifest?v=WGLRRyy6MP`)}">
+    <link rel="apple-touch-icon" sizes="180x180" href="${PUBLIC}apple-touch-icon.png?v=WGLRRyy6MP">
+    <link rel="icon" type="image/png" sizes="32x32" href="${PUBLIC}favicon-32x32.png?v=WGLRRyy6MP">
+    <link rel="icon" type="image/png" sizes="16x16" href="${PUBLIC}favicon-16x16.png?v=WGLRRyy6MP">
+    <link rel="mask-icon" href="${PUBLIC}safari-pinned-tab.svg?v=WGLRRyy6MP" color="#523a55">
+    <link rel="shortcut icon" href="${PUBLIC}favicon.ico?v=WGLRRyy6MP">
+    <meta name="application-name" content="IDS Vote!">
+    <meta name="msapplication-TileColor" content="#523a55">
+    <meta name="theme-color" content="#523a55">
+
+    <base href="${PUBLIC}">
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <%= require('./inc/header.html') %>
+      <!-- end header -->
+
+      <%= require(`./${htmlWebpackPlugin.options.partial}.html`) %>
+
+      <!-- begin footer -->
+      <%= require('./inc/footer.html') %>
+      <!-- end footer -->
+    </div>
+    
+    <div class="offline-ready js-offline-ready" hidden>
+      <p>Нет соединения с интернетом</p>
+    </div>
+
+    <!-- Spinner loaser -->
+    <svg class="spinner js-loader" width="64" height="64" viewBox="0 0 64 64">
+      <defs>
+        <linearGradient id="sGD" gradientUnits="userSpaceOnUse" x1="55" y1="46" x2="2" y2="46">
+          <stop offset="10%" style="stop-color: #F12753; stop-opacity: 0;"></stop>
+          <stop offset="100%" style="stop-color: #F12753;"></stop>
+        </linearGradient>
+      </defs>
+      <g fill="none" style="stroke-width: 4; stroke-linecap: round;">
+        <path stroke="url(#sGD)" d="M4,32 c0,15,12,28,28,28c8,0,16-4,21-9"></path>
+        <path d="M60,32 C60,16,47.464,4,32,4S4,16,4,32" style="stroke: #F12753;"></path>
+      </g>
+    </svg>
+
+    <script src="//unpkg.com/focus-visible@4.1.4/dist/focus-visible.min.js" async></script>
+  </body>
+
+</html>
